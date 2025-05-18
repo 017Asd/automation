@@ -1,0 +1,49 @@
+{
+    "test_cases": [
+        {
+            "id": "tc-001",
+            "name": "Basic Input Validation",
+            "description": "Test basic input validation for user registration",
+            "input_data": {
+                "username": "testuser",
+                "email": "test@example.com",
+                "password": "Password123!"
+            },
+            "expected_output": {
+                "status": "success",
+                "message": "User registered successfully"
+            },
+            "is_edge_case": false
+        },
+        {
+            "id": "tc-002",
+            "name": "Password Complexity",
+            "description": "Test password complexity requirements",
+            "input_data": {
+                "username": "testuser2",
+                "email": "test2@example.com",
+                "password": "weak"
+            },
+            "expected_output": {
+                "status": "error",
+                "message": "Password does not meet complexity requirements"
+            },
+            "is_edge_case": false
+        },
+        {
+            "id": "tc-003",
+            "name": "Email Format Validation",
+            "description": "Test email format validation",
+            "input_data": {
+                "username": "testuser3",
+                "email": "invalid-email",
+                "password": "Password123!"
+            },
+            "expected_output": {
+                "status": "error",
+                "message": "Invalid email format"
+            },
+            "is_edge_case": false
+        }
+    ]
+} 
